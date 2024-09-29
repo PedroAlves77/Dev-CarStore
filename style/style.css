@@ -8,12 +8,12 @@
     font-family: "Poppins", sans-serif;
 }
 
-a{
-    z-index: 2;
+a {
     position: relative;
     color: #fff;
 }
-a:hover{
+
+a:hover {
     color: #fff;
     text-decoration: none;
 }
@@ -31,50 +31,52 @@ body {
 
 header {
 
-    & h2{
-        margin: 20px 0 0 80px;
+    & h2 {
+        margin: 0px 0 0 80px;
         text-transform: uppercase;
         font-weight: bold;
     }
 }
 
-.navbar{
+.navbar {
+    font-weight: bold;
+    text-transform: uppercase;
     max-width: 1500px;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link{
-    font-weight: bold;
+nav.navbar-transparent {
+    height: 80px;
+    background-color: #6d00d9;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link {
     color: #fff;
-    text-transform: uppercase;
     font-size: 10px;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link:hover{
+.navbar-light .navbar-nav .nav-item .nav-link:hover {
     color: #fff;
 }
 
-.navbar-light .navbar-toggler{
-    color: rgba(255, 255, 255,.5);
-    border-color: white ;
+.navbar-light .navbar-toggler {
+    color: rgba(255, 255, 255, .5);
+    border-color: white;
 }
 
 section {
-    height: 100vh;
-    position: relative;
+    margin-top: 400px;
 
     & .list {
         width: 70vw;
         height: 100%;
         margin: auto;
-        position: relative;
-
+        
         & .item {
-            position: absolute;
             inset: 0;
 
             & .car-image {
                 width: 70%;
-                position: absolute;
+                position: fixed;
                 top: 50%;
                 transform: translateY(-50%);
 
@@ -84,9 +86,10 @@ section {
                     transform: rotate(-28deg);
                 }
 
-                &::before{
+
+                &::before {
                     content: '';
-                    position: absolute;
+                    position: fixed;
                     background-color: #000;
                     width: 100%;
                     height: 100px;
@@ -99,7 +102,7 @@ section {
         }
 
         & .content {
-            position: absolute;
+            position: fixed;
             right: 100px;
             width: 70%;
             height: 100%;
@@ -114,11 +117,6 @@ section {
                 font-weight: bold;
             }
 
-            & h2 {
-                font-size: 6em;
-                line-height: 1em;
-                font-family: "League Gothic", sans-serif;
-            }
 
             & .description {
                 color: #d9d9d9;
@@ -143,7 +141,7 @@ section {
 
         &::before {
             content: '';
-            position: absolute;
+            position: fixed;
             height: 200px;
             width: 100%;
             top: 50%;
@@ -152,8 +150,8 @@ section {
     }
 
     .arrow {
-        width: 70vw;
-        position: absolute;
+        width: 70%;
+        position: fixed;
         top: 50%;
         left: 50%;
         display: flex;
@@ -189,8 +187,7 @@ section {
     }
 
     .indicator {
-        z-index: 1;
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
@@ -202,7 +199,6 @@ section {
         gap: 15px;
 
         & .number {
-            z-index: 0;
             font-size: 5em;
             font-family: "League Gothic", sans-serif;
         }
@@ -230,10 +226,10 @@ section {
 
 section {
     & .list {
-    --calculation: 1;
+        --calculation: 1;
 
         & .item {
-            transform: translateX(calc(100vw * var(--calculation) ));
+            transform: translateX(calc(100vw * var(--calculation)));
             transition: 0.5s;
             opacity: 0;
 
@@ -245,7 +241,6 @@ section {
 
                 }
             }
-
 
             & .content {
 
@@ -295,6 +290,78 @@ section {
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+/******media querie*********/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+
+    header {
+
+        & h2 {
+            margin: 0px 0 0 80px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    section {
+        & h2 {
+            font-size: 4em;
+            line-height: 1em;
+            font-family: "League Gothic", sans-serif;
+        }
+
+        & .car-image {
+            width: 70%;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+
+            & img {
+                padding-right: 40px;
+                width: 100%;
+                transform: rotate(-28deg);
+            }
+
+
+            &::before {
+                content: '';
+                position: fixed;
+                background-color: #000;
+                width: 100%;
+                height: 100px;
+                top: 150%;
+                left: 50px;
+                border: 50%;
+                filter: blur(50px);
+            }
+        }
+    }
+}
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    section {
+        & h2 {
+            font-size: 6em;
+            line-height: 1em;
+            font-family: "League Gothic", sans-serif;
         }
     }
 }

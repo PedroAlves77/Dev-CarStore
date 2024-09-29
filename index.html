@@ -13,6 +13,11 @@
     <!-- Estilo Customizado -->
     <link rel="stylesheet" href="style/style.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
@@ -27,12 +32,18 @@
 <body>
 
     <header><!-- início barra de navegação -->
-            <nav class="navbar navbar-expand-md navbar-transparent 
+        <nav class="navbar navbar-expand-md navbar-transparent 
             fixed-top">
             <a href="">
                 <h2>Dev CarStore</h2>
             </a>
-                <ul class="navbar-nav ml-auto">
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav-principal">
+                <ul class="navbar-nav ml-auto ">
                     <li class="nav-item">
                         <a href="" class="nav-link">Home</a>
                     </li>
@@ -43,7 +54,8 @@
                         <a href="" class="nav-link">Fale Conosco</a>
                     </li>
                 </ul>
-        </div>
+            </div>
+            </div>
 
         </nav>
     </header><!-- /fim barra de navegação -->
@@ -53,7 +65,7 @@
             <div class="item ativo">
                 <div>
                     <div class="car-image">
-                        <img src="img/car 1.png" alt="imagem carro">
+                        <img src="img/car 1.png " alt="imagem carro">
                     </div>
                     <div class="content">
                         <p class="tittle-car">
@@ -115,6 +127,7 @@
                             com a mais recente tecnologia da marca. O design chama à atenção por onde passa, seja no
                             exterior personalizado ou no interior luxouso. Adquira já à sua e tenha essa experiência!
                         </p>
+                        <div></div>
                         <button class="information">
                             <a href="">Saiba mais</a>
                         </button>
@@ -135,12 +148,27 @@
                 <li class="ativo"></li>
                 <li></li>
                 <li></li>
-            </ul>
+            </ul> 
         </div>
-
     </section> <!-- fim carros -->
+    
+    <section> <!-- sobre a empresa -->
+        <h2>Sobre nós</h2>
+        <p>A DevCar Store foi inaugurada em 2010, visando ofertar os melhrores supercarros para na região de Belo Horizonte</p>
+    </section>
 
     <script src="scripts/script.js"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
